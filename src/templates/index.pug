@@ -8,10 +8,28 @@ html
     meta(property="og:url" content="http://iamnabil.me/portfolio")
     meta(property="og:image" content="../assets/meta.png")
     meta(property="og:description" content="Hello, I'm Nabil Tharwat, a full-stack developer based in Egypt. I build websites using the MERN stack.")
-    title I AM NABIL THARWAT - Full-Stack Developer
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title I AM NABIL THARWAT - Full-Stack Developer
+    link(rel='apple-touch-icon', sizes='57x57', href='assets/apple-icon-57x57.png')
+    link(rel='apple-touch-icon', sizes='60x60', href='assets/apple-icon-60x60.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='assets/apple-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='76x76', href='assets/apple-icon-76x76.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='assets/apple-icon-114x114.png')
+    link(rel='apple-touch-icon', sizes='120x120', href='assets/apple-icon-120x120.png')
+    link(rel='apple-touch-icon', sizes='144x144', href='assets/apple-icon-144x144.png')
+    link(rel='apple-touch-icon', sizes='152x152', href='assets/apple-icon-152x152.png')
+    link(rel='apple-touch-icon', sizes='180x180', href='assets/apple-icon-180x180.png')
+    link(rel='icon', type='image/png', sizes='192x192', href='assets/android-icon-192x192.png')
+    link(rel='icon', type='image/png', sizes='32x32', href='assets/favicon-32x32.png')
+    link(rel='icon', type='image/png', sizes='96x96', href='assets/favicon-96x96.png')
+    link(rel='icon', type='image/png', sizes='16x16', href='assets/favicon-16x16.png')
+    link(rel='manifest', href='/manifest.json')
+    meta(name='msapplication-TileColor', content='#ffffff')
+    meta(name='msapplication-TileImage', content='assets/ms-icon-144x144.png')
+    meta(name='theme-color', content='#ffffff')
+
     script(src="index.dev.js" async)
-    link(href="../GLOBAL_CSS/main.styl" rel="stylesheet")
+    link(href="index.css" rel="stylesheet")
     link( href="https://fonts.googleapis.com/css?family=Nunito:200,400,900" rel="stylesheet")
   body
     header.o-header
@@ -56,8 +74,9 @@ html
               span.c-symbol ∞
               | FPS 
             p.c-perk-description I'm all about efficiency and performance, buckle up!
-        button.o-secondIntro-cv.c-button.c-button--red
-            p Download my CV
+        form(method="GET" action="Resume.pdf")
+          button.o-secondIntro-cv.c-button.c-button--red
+              p Download my CV
       .c-pageBreak
         hr.c-hr-break
         h1.c-section-title.u-color-base My recent works
@@ -71,7 +90,7 @@ html
           .c-project-info.u-animation-fadeInto-left
             h1.c-project-title Clock Animated
             p.c-project-description A demo clock with elegance and performance in mind.
-            form(method="GET" action="https://KL13NT.github.io/Clock-Animated" target="_blank")
+            form(method="GET" action="https://KL13NT.github.io/Clock-Animated")
               button.c-button--round
                 p Demo
         .c-project(data-project='SW19')
@@ -83,7 +102,7 @@ html
           .c-project-info.u-animation-fadeInto-left
             h1.c-project-title SW19
             p.c-project-description A tiny animation made for fun!
-            form(method="GET" action="https://KL13NT.github.io/Clock-Animated" target="_blank")
+            form(method="GET" action="https://KL13NT.github.io/SW19")
               button.c-button--round 
                 p Demo
       .c-pageBreak
@@ -138,4 +157,4 @@ html
         h1.c-section-title.u-color-base Have any questions?
         button.c-button--red.c-button--round.u-center-h(type="submit")
           p Contact me!
-    script(src="../../index.js")
+    script(src="index.prod.js")
