@@ -8,7 +8,7 @@ document.getElementById('navigationButton').addEventListener('click', (e)=>{
 window.addEventListener('load', ()=>{
   let windowInnerHeight = innerHeight + 100
   let scrollEffect = (element, classToBeAdded)=>{
-    if(pos[elements.indexOf(element)]  <= (pageYOffset + windowInnerHeight )) element.classList.add(classToBeAdded)
+    element.classList.add(classToBeAdded)
   }
   let elements = [
     document.querySelector('.o-firstIntro-plant'),
@@ -20,15 +20,21 @@ window.addEventListener('load', ()=>{
   ]
   let pos = []
   elements.forEach(element=>{
-    pos.push((element.offsetTop + element.offsetHeight))
+    if(element.classList.contains('c-project')) pos.push(element.offsetTop + element.offsetHeight + element.parentNode.offsetTop)
+    else pos.push((element.offsetTop + element.offsetHeight))
   })
   console.log(pos, elements)
   window.addEventListener('scroll', (e)=>{
     elements.forEach(element=>{
-      if(element.classList.contains('c-skill')) {
-        scrollEffect(element, 'c-skill-progress--isLoaded')
+      if(pos[elements.indexOf(element)]  <= (pageYOffset + windowInnerHeight )){
+        if(element.classList.contains('c-skill')) {
+          scrollEffect(element, 'c-skill-progress--isLoaded')
+        }
+        else if(element.classList.contains('c-project')){
+          scrollEffect(element, 'c-project--isActive')
+        }
+        else scrollEffect(element, 'u-animation-fadeInto-direction--isActive')
       }
-      else scrollEffect(element, 'u-animation-fadeInto-direction--isActive')
     })
     
   })

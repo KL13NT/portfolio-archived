@@ -55,7 +55,7 @@ html
       .c-pageBreak
         hr.c-hr-break
         h1.c-section-title.u-color-base My recent works
-      .o-body-projects.c-section
+      .o-body-projects.c-section#works
         .c-project(data-project='clockAnimated')
           .c-project-preview.u-animation-fadeInto-right 
               .c-preview-desktop
@@ -83,7 +83,7 @@ html
         h1.c-section-title.u-color-trueblack I 
           span.u-text-bold enjoy 
           | working with 
-      .o-skills
+      .o-skills#skills
         .c-skill(data-skill="Javascript")
           h3.c-skill-title Javascript
           .c-skill-progress
@@ -125,7 +125,8 @@ html
           .c-skill-progress
           .c-skill-description Adobe Photoshop, Illustrator, XD, Figma, inVision Studio
       .c-pageBreak
-    footer.o-footer.u-animation-fadeInto-top
-      h1.c-section-title.u-color-base Have any questions?
-      .c-button--red.c-button--round.u-center-h
-        p Contact me!
+    footer.o-footer.u-animation-fadeInto-top#contact
+      form(action="mailto:nabil.tharwat@outlook.com")
+        h1.c-section-title.u-color-base Have any questions?
+        button.c-button--red.c-button--round.u-center-h(type="submit")
+          p Contact me!
