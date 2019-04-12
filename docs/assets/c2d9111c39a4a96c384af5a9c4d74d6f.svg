@@ -1,1 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="473.728" width="1160.444"><defs><path id="a" opacity="1" fill-rule="evenodd" d="M0 473.728S32.341 305.866 192.968 237.07c160.627-68.796 205.905 197.582 379.468 161.257C746 362.003 598.31-59.028 987.48 7.017c389.17 66.043 0 466.71 0 466.71"/><linearGradient id="b" x1=".51" y1=".6" x2=".93" y2=".99"><stop offset="0" stop-color="#C626B0"/><stop offset="1" stop-color="#3099B0"/></linearGradient><path id="c" opacity="1" fill-rule="evenodd" d="M30 430.374s30-152.5 179-215 191 179.5 352 146.5 24-415.5 385-355.5 0 424 0 424"/><linearGradient id="d" x1=".51" y1=".6" x2=".93" y2=".99"><stop offset="0" stop-color="#C626B0"/><stop offset="1" stop-color="#3099B0"/></linearGradient></defs><use xlink:href="#a" fill="url(#b)" opacity=".24"/><use xlink:href="#c" fill="url(#d)" transform="translate(24 43.354)"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="473.72769201025994" width="1160.4444444444443">
+  <defs>
+    <path id="path-1" opacity="1" fill-rule="evenodd" d="M0,473.72769201025994 C0,473.72769201025994 32.34104046242774,305.8656715464504 192.96820809248555,237.06976152029904 C353.59537572254334,168.2738514941476 398.8728323699422,434.65161511540566 572.4364161849711,398.3273746215977 C746,362.0031341277898 598.3092485549133,-59.02783523225661 987.4797687861272,7.016238392848737 C1376.650289017341,73.06031201795408 987.4797687861272,473.72769201025994 987.4797687861272,473.72769201025994 "/>
+    <linearGradient id="linearGradient-2" x1="0.51" y1="0.6" x2="0.93" y2="0.99">
+      <stop offset="0" stop-color="rgb(198,38,176)" stop-opacity="1"/>
+      <stop offset="1" stop-color="rgb(48,153,176)" stop-opacity="1"/>
+    </linearGradient>
+    <path id="path-3" opacity="1" fill-rule="evenodd" d="M30,430.3741420003946 C30,430.3741420003946 59.99999999999999,277.8741420003945 209,215.37414200039447 C358,152.87414200039444 400.00000000000006,394.8741420003944 561,361.87414200039433 C722,328.87414200039433 585,-53.625857999605614 946,6.3741420003944045 C1307,66.37414200039441 946,430.3741420003946 946,430.3741420003946 "/>
+    <linearGradient id="linearGradient-4" x1="0.51" y1="0.6" x2="0.93" y2="0.99">
+      <stop offset="0" stop-color="rgb(198,38,176)" stop-opacity="1"/>
+      <stop offset="1" stop-color="rgb(48,153,176)" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(580.2222222222222, 236.86384600512997) scale(-1, -1) translate(-580.2222222222222, -236.86384600512997)" opacity="1">
+    <g transform="translate(580.2222222222223, 236.86384600512997) scale(-1, -1) translate(-580.2222222222223, -236.86384600512997)" opacity="0.24">
+      <use xlink:href="#path-1" fill="url(#linearGradient-2)"/>
+    </g>
+    <g transform="translate(568.2222222222223, 215.1870710001973) scale(-1, -1) translate(-568.2222222222223, -215.1870710001973)" opacity="1">
+      <use xlink:href="#path-3" fill="url(#linearGradient-4)"/>
+    </g>
+  </g>
+</svg>

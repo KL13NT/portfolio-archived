@@ -1,1 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="473.728" width="1160.444"><defs><path id="a" opacity="1" fill-rule="evenodd" d="M0 473.728S32.341 305.866 192.968 237.07c160.627-68.796 205.905 197.582 379.468 161.257C746 362.003 598.31-59.028 987.48 7.017c389.17 66.043 0 466.71 0 466.71"/><linearGradient id="b" x1=".51" y1=".6" x2=".93" y2=".99"><stop offset="0" stop-color="#C626B0"/><stop offset="1" stop-color="#3099B0"/></linearGradient><path id="c" opacity="1" fill-rule="evenodd" d="M30 433.374s30-152.5 179-215 191 179.5 352 146.5 24-415.5 385-355.5 0 424 0 424"/><linearGradient id="d" x1=".51" y1=".6" x2=".93" y2=".99"><stop offset="0" stop-color="#C626B0"/><stop offset="1" stop-color="#3099B0"/></linearGradient></defs><use xlink:href="#a" fill="url(#b)" transform="matrix(1 0 0 -1 0 473.728)" opacity=".24"/><use xlink:href="#c" fill="url(#d)" transform="matrix(1 0 0 -1 24 436.374)"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="473.72769201025994" width="1160.4444444444446">
+  <defs>
+    <path id="path-1" opacity="1" fill-rule="evenodd" d="M2.2737367544323206e-13,473.72769201025994 C2.2737367544323206e-13,473.72769201025994 32.34104046242797,305.8656715464504 192.96820809248578,237.06976152029904 C353.59537572254357,168.2738514941476 398.87283236994244,434.65161511540566 572.4364161849713,398.3273746215977 C746.0000000000002,362.0031341277898 598.3092485549136,-59.02783523225661 987.4797687861275,7.016238392848737 C1376.6502890173413,73.06031201795408 987.4797687861275,473.72769201025994 987.4797687861275,473.72769201025994 "/>
+    <linearGradient id="linearGradient-2" x1="0.51" y1="0.6" x2="0.93" y2="0.99">
+      <stop offset="0" stop-color="rgb(198,38,176)" stop-opacity="1"/>
+      <stop offset="1" stop-color="rgb(48,153,176)" stop-opacity="1"/>
+    </linearGradient>
+    <path id="path-3" opacity="1" fill-rule="evenodd" d="M30.000000000000227,433.3741420003946 C30.000000000000227,433.3741420003946 60.00000000000022,280.8741420003945 209.00000000000023,218.37414200039447 C358.0000000000002,155.87414200039444 400.0000000000003,397.8741420003944 561.0000000000002,364.87414200039433 C722.0000000000002,331.87414200039433 585.0000000000002,-50.625857999605614 946.0000000000002,9.374142000394404 C1307.0000000000002,69.37414200039441 946.0000000000002,433.3741420003946 946.0000000000002,433.3741420003946 "/>
+    <linearGradient id="linearGradient-4" x1="0.51" y1="0.6" x2="0.93" y2="0.99">
+      <stop offset="0" stop-color="rgb(198,38,176)" stop-opacity="1"/>
+      <stop offset="1" stop-color="rgb(48,153,176)" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(580.2222222222225, 236.86384600512997) scale(-1, 1) translate(-580.2222222222225, -236.86384600512997)" opacity="1">
+    <g transform="translate(580.2222222222225, 236.86384600512997) scale(-1, -1) translate(-580.2222222222225, -236.86384600512997)" opacity="0.24">
+      <use xlink:href="#path-1" fill="url(#linearGradient-2)"/>
+    </g>
+    <g transform="translate(568.2222222222225, 218.1870710001973) scale(-1, -1) translate(-568.2222222222225, -218.1870710001973)" opacity="1">
+      <use xlink:href="#path-3" fill="url(#linearGradient-4)"/>
+    </g>
+  </g>
+</svg>

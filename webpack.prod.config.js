@@ -91,8 +91,9 @@ module.exports = {
       threshold: 200*1024
     }),
     new ImageminPlugin({
+      minFileSize: 2024 * 100,
       pngquant: {quality: '50-50'},
-      plugins: [imageminMozjpeg({quality: 50})]
+      plugins: [imageminMozjpeg({quality: 30})]
     })
   ],
   optimization: {
