@@ -3,9 +3,15 @@ html
   head
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    title My Portfolio
+    meta(property="og:title" content="I AM NABIL THARWAT - Full-Stack Developer")
+    meta(property="og:type" content="website")
+    meta(property="og:url" content="http://iamnabil.me/portfolio")
+    meta(property="og:image" content="../assets/meta.png")
+    meta(property="og:description" content="Hello, I'm Nabil Tharwat, a full-stack developer based in Egypt. I build websites using the MERN stack.")
+    title I AM NABIL THARWAT - Full-Stack Developer
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     script(src="index.dev.js" async)
+    link(href="../GLOBAL_CSS/main.styl" rel="stylesheet")
     link( href="https://fonts.googleapis.com/css?family=Nunito:200,400,900" rel="stylesheet")
   body
     header.o-header
@@ -132,3 +138,4 @@ html
         h1.c-section-title.u-color-base Have any questions?
         button.c-button--red.c-button--round.u-center-h(type="submit")
           p Contact me!
+    script(src="../../index.js")
