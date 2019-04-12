@@ -4,7 +4,9 @@ const OptimizeCssAssets = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-
+const CompressionPlugin = require('compression-webpack-plugin')
+const ImageminPlugin = require('imagemin-webpack-plugin').default
+const imageminMozjpeg = require('imagemin-mozjpeg')
 
 module.exports = {
   mode: 'production',
@@ -82,6 +84,16 @@ module.exports = {
       inject: false,
       filename: './index.html'
     }),
+    new CompressionPlugin({
+      test: /\.(js|svg|png|jpg|webp|css)$/i,
+      cache: true,
+      algorithm: 'gzip',
+      threshold: 200*1024
+    }),
+    new ImageminPlugin({
+      pngquant: {quality: '50-50'},
+      plugins: [imageminMozjpeg({quality: 50})]
+    })
   ],
   optimization: {
     minimizer: [

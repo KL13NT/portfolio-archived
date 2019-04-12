@@ -17,6 +17,15 @@
   opacity 0.2
 
 .o-header--isActive
+  a
+    opacity 1
+    transform translate(0,0)
+    visibility visible
+  .c-hamburger
+    &::before
+      transform scaleX(1)
+    &::after
+      transform scaleX(0.5)
   &::before
     opacity 1
     background-position -874px -150px, 990px -340px, 320px 476px, center
