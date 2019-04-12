@@ -28,9 +28,8 @@ html
     meta(name='msapplication-TileImage', content='assets/ms-icon-144x144.png')
     meta(name='theme-color', content='#ffffff')
 
-    script(src="index.dev.js" async)
+    script(src="index.prod.js" defer)
     link(href="index.css" rel="stylesheet")
-    link( href="https://fonts.googleapis.com/css?family=Nunito:200,400,900" rel="stylesheet")
   body
     header.o-header
       .o-header--intro
@@ -157,4 +156,3 @@ html
         h1.c-section-title.u-color-base Have any questions?
         button.c-button--red.c-button--round.u-center-h(type="submit")
           p Contact me!
-    script(src="index.prod.js")
