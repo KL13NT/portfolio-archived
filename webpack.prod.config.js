@@ -15,7 +15,7 @@ module.exports = {
   output: {
     libraryTarget: 'umd',
     filename: '[name].prod.js',
-    path: path.resolve(__dirname, 'static'),
+    path: path.resolve(__dirname, 'docs'),
   },
   module: {
     rules: [
@@ -24,7 +24,7 @@ module.exports = {
         exclude: path.resolve(__dirname, 'node_modules'),
         use: [
           'babel-loader',
-          'eslint-loader'
+          'eslint-loader',
         ]
       },
       {
@@ -89,7 +89,7 @@ module.exports = {
       new UglifyJsPlugin({
         cache: false,
         parallel: false,
-        sourceMap: true
+        sourceMap: false
       }),
     ],
     splitChunks: {
