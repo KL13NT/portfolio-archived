@@ -1,0 +1,222 @@
+//this includes all components, prefixed -c, reusable pieces, css stuff
+@import './settings.styl'
+.c-anchor
+  border solid 1px  $border-gradient
+  border-radius 2.5rem
+  font $btnFont
+  text-transform $txtUpper
+  transition background 0.5s
+  margin-left 1.5rem
+
+.c-anchor--nav
+  transition visibility 0.5s, transform 0.5s, opacity 0.5s
+  padding 0 1rem
+  &::hover
+    border-bottom solid 2px black
+
+
+.c-heading-2
+  text-transform $txtUpper
+  font $headerFont
+  color $white
+  font-weight normal
+  &::before, &::after
+    position relative
+    font-size 1rem
+    text-transform Capitalize
+    font-weight normal
+    color #444444
+    line-height 22px
+
+.c-hamburger-container
+  height 30px
+.c-hamburger
+  border-radius 12px
+  display block
+  width 60px
+  height 8px
+  transform-origin right
+  &::before, &::after
+    content ''
+    width inherit
+    height inherit
+    display block
+    background #fff
+    top -14px
+    position relative
+    border-radius inherit
+    transform-origin right
+    transition transform 0.5s
+  &::before
+    transform scaleX(0.5)
+  &::after
+    transform scaleX(1)
+    top -8px
+
+.c-hamburger--isActive
+  &::before
+    transform scaleX(1)
+  &::after
+    transform scaleX(0.5)
+
+.c-section
+  width 100%
+  margin 2rem 0
+  position relative
+
+.c-perk
+  width 80%
+
+.c-perk-header
+  font-weight 400
+
+.c-perk-description
+  font-weight 200
+
+.c-perk-img
+  width 20%
+
+.c-symbol
+  font-size: 3rem;
+  font-family: monospace;
+  font-weight: normal;
+  position: relative;
+  line-height: 0;
+  margin-right: 4px;
+  bottom: -8px;
+
+.c-button
+  background: $blueGradient
+  width: 10rem;
+  border-radius 0.7rem
+  padding: 2px;
+  height: 3.3rem;
+  position: relative;
+  color black
+  cursor pointer
+  transition color 0.5s
+  text-transform uppercase
+  font-size larger 
+  &:hover
+    color white
+    p
+      background transparent
+  p
+    height: 100%;
+    background: white;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center
+    transition background 0.5s
+
+.c-button--red 
+  @extend .c-button
+  background: $redGradient
+
+.c-button--round
+  @extend .c-button
+  border-radius 50rem
+  text-transform capitalize
+  p
+    border-radius inherit
+
+.c-hr-break
+  width 90%
+  margin 4rem auto
+  background $base
+  border-radius 5rem
+
+.c-section-title
+  margin 0 auto
+  width max-content
+  font-size 3rem
+  font-weight 400
+
+.c-project
+  width 85%
+  display grid
+  margin 5rem auto 
+  grid-template 1fr/2fr 1fr
+  grid-gap 2rem
+  justify-items: self-end
+
+.c-project-info
+  width 100%
+
+.c-project-preview
+  width 100%
+  margin 0 2rem 0 0 
+  position relative
+  img 
+    width 100%  
+    border-radius inherit 
+
+.c-preview-desktop
+  border-radius 12px
+  height 26rem 
+  width: calc((728/410)* 26rem)
+  z-index 4
+  background $blueGradient
+  padding 6px
+  
+.c-desktop-img
+  background-repeat no-repeat
+  z-index: 5;
+  height: 100%;
+  background-size: cover;
+  border-radius: inherit;
+  box-shadow: rgba(0,0,0,0.5) 0 1px 82px 12px inset
+
+.c-project-title
+  margin 0 0 2rem 0
+  font-weight 400
+  width 2rem
+
+.c-project-description
+  margin 2rem 0 
+
+.c-mobile-img
+  @extend .c-desktop-img
+  padding: 0 2rem
+  &::before
+    content: ''
+    height: 12px;
+    background: linear-gradient(0deg, #14badc, #14badc);
+    width: 100%;
+    display: block;
+    border-radius: 6px;
+    position: relative;
+    top: -4px;
+
+.c-preview-mobile 
+  @extend .c-preview-desktop 
+  position: absolute
+  height: 20rem;
+  width: calc((410/728)*20rem);
+  top 10rem
+  right -2rem
+
+.c-skill-progress
+  width 90%
+  background $progress
+  height 2rem
+  border-radius 5rem
+  position relative 
+  &::after
+    transition transform 1s
+    transform scaleX(0)
+    transform-origin left
+    transition-timing-function: cubic-bezier(.86,-0.05,.25,1.21)
+    content ''
+    width 100%
+    height 100%
+    background $blueGradientProgress
+    display block 
+    border-radius inherit
+
+.c-skill-progress--isLoaded
+  .c-skill-progress::after
+    transform scaleX(1)
+.c-skill-description
+  color $base

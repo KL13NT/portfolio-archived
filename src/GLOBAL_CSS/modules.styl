@@ -1,0 +1,261 @@
+//this includes all layout containers, objects, prefixed -o or -l for layout, layout stuff
+@import './settings.styl'
+
+.o-header
+  background linear-gradient(45deg, #FC9A13 0%, #FEF31D 100%)
+
+.o-header::before
+  content ''
+  position absolute 
+  width 100% 
+  height 100% 
+  background url('../assets/topLeftAbs.svg'), url('../assets/topRightAbs.svg'), url('../assets/bottomRightAbs.svg'), url('../assets/headerPlant.jpg')
+  background-repeat no-repeat
+  background-position -944px -230px, 1040px -420px, 480px 576px, center
+  background-size auto, auto,auto, cover
+  opacity 0.2
+
+.o-header-overlays
+  overflow hidden
+  height 100% 
+  width 100%
+  position absolute
+  z-index 1
+  > img[data-overlayType="topRight"]
+    position $overlayImgsPosition
+    top -25rem
+    right -30rem
+    opacity 0.17
+    height 88%
+  > img[data-overlayType="topLeft"]
+    position $overlayImgsPosition
+    top -10rem
+    left -60rem
+    opacity 0.40 
+  &::before
+    content ''
+    position absolute
+    width 100%
+    height 100% 
+    background url('../assets/headerPlantOp.png')
+    overflow hidden
+    background-repeat no-repeat
+    background-size cover
+    background-position center
+    opacity 0.1
+
+.o-header--navOpener
+  width 3rem
+  top 0.5rem
+  height 0.5rem
+  position relative
+  display block
+  border 0.3rem solid #4F4F4F
+  border-radius 0.5rem
+  &::before
+    content ''
+    width 1.5rem
+    position relative
+    display block
+    border 0.3rem solid #4f4f4f
+    border-radius 2.5rem
+    top -1rem
+    height min-content
+
+.o-header--heading
+  &::before
+    content 'Hello,'
+    top -2.5rem
+    left 2.7rem
+  &::after
+    content 'Full Stack Developer'
+    top 1rem
+    left -8rem
+    border-bottom 2px solid #808080
+
+.o-header--navOpener__closed
+  &::before
+    left 4px
+
+.o-header--intro
+  z-index 3
+  overflow hidden 
+  background rgba(210, 210, 210, 0.3)
+  top 50%
+  left 50% 
+  transform translate(-50%, -50%)
+  position absolute
+  width 80%
+  height 80%
+  padding 2rem
+  box-shadow 0 0 16px 0 rgba(255,255,255, 0.5)
+
+.o-header--textIntro 
+  position relative
+  top 42%
+  left 50%
+  transform translate(-50%, -50%)
+  width auto
+  max-width max-content
+
+.o-header--navigation
+  position relative
+  float right
+  width auto
+  margin 1rem 2rem 0 0
+  justify-content: right
+  > a:nth-child(1)
+    transition-delay 0.3s
+  > a:nth-child(2)
+    transition-delay 0.2s
+  > a:nth-child(3)
+    transition-delay 0.1s
+
+.o-header--navigation__opened
+  a
+    visibility: visible
+    opacity 1
+    transform translateX(-20px)
+
+.o-header-links 
+  position relative
+  left 0.8rem
+  display flex 
+  flex-direction: row 
+  justify-content: space-evenly
+  max-width 7rem
+  > a img
+    width auto
+    height 100%
+  
+.o-firstIntro-plant
+  width 60%
+  top -3rem
+  left 31rem
+  z-index 1
+
+.o-body 
+  padding 1rem 3rem
+
+.o-firstIntro-heading, .o-firstIntro-plant
+  position relative
+
+.o-firstIntro-heading
+  color $base
+  z-index 2
+  font-size 3.5rem
+  top 16rem
+  &::before
+    content: ',,'
+    position: absolute
+    color red
+    top -10rem
+    font-size 5rem
+  &::after
+    content 'Nabil Tharwat'
+    position: absolute
+    top: 10rem;
+    font-size: 2rem;
+    font-weight: 200;
+    left: 0;
+
+.o-secondIntro-heading
+  font-size 3.5rem
+  width 36rem
+  color $base
+
+.o-secondIntro-perks 
+  position absolute
+  top: 0;
+  right: 0;
+  display: grid;
+  grid-gap 1rem
+  grid-template: 1fr 1fr/ 1fr 1fr;
+  width: 50%;
+
+.o-secondIntro-cv
+  height: 2.5rem
+  width 15rem
+
+.o-body-secondIntro
+  margin 12rem 0
+
+.o-body-projects
+  display flex 
+  flex-direction column 
+  margin 4rem 0 0 0 
+
+div[data-project='clockAnimated']
+  .c-desktop-img
+    background-image: url('../assets/clockAnimatedDesktop.png') 
+  .c-mobile-img
+    background-image: url('../assets/clockAnimatedMobile.png') 
+
+div[data-project='SW19']
+  .c-desktop-img
+    background-image: url('../assets/SW19Desktop.png') 
+  .c-mobile-img
+    background-image: url('../assets/SW19Mobile.png') 
+
+.o-skills
+  width 90%
+  margin 4rem auto
+  display grid 
+  grid-template auto/1fr 1fr
+  grid-gap 3rem 6rem
+  animation-duration: 1s
+  animation-iteration-count: 1
+  animation-timing-function: ease-in-out
+
+div[data-skill='Javascript']
+  .c-skill-progress::after
+    width 90%
+
+div[data-skill='React']
+  .c-skill-progress::after
+    width 80%
+
+div[data-skill='Responsive']
+  .c-skill-progress::after
+    width 95%
+
+div[data-skill='Pre-Processors']
+  .c-skill-progress::after
+    width 100%
+
+div[data-skill='Server']
+  .c-skill-progress::after
+    width 60%
+
+div[data-skill='Database']
+  .c-skill-progress::after
+    width 60%
+
+div[data-skill='Libraries']
+  .c-skill-progress::after
+    width 100%
+
+div[data-skill='Testing']
+  .c-skill-progress::after
+    width 90%
+
+div[data-skill='DevOps']
+  .c-skill-progress::after
+    width 75%
+
+div[data-skill='Design']
+  .c-skill-progress::after
+        width 100%
+
+
+
+
+
+.o-footer
+  height 50vh
+  padding 4rem
+  background url('../assets/Bg abstract.svg') no-repeat 
+  background-position  45% 0%
+  h1
+    font-size 2rem
+    margin 0 auto 2rem auto

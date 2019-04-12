@@ -1,0 +1,131 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title My Portfolio
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    script(src="index.dev.js" async)
+    link( href="https://fonts.googleapis.com/css?family=Nunito:200,400,900" rel="stylesheet")
+  body
+    header.o-header
+      .o-header--intro
+        nav#headerNavigation.o-header--navigation.u-width-2
+          a.c-anchor.c-anchor--nav.u-display-none.u-opacity-zero.u-fadeinto-left(href="#skills") Skills
+          a.c-anchor.c-anchor--nav.u-display-none.u-opacity-zero.u-fadeinto-left(href="#works") Works
+          a.c-anchor.c-anchor--nav.u-display-none.u-opacity-zero.u-fadeinto-left(href="#contact") Contact
+          button.c-hamburger-container#navigationButton(aria-label='menu' aria-controls='navigation')
+            span.c-hamburger
+        .o-header--textIntro.u-clearfix
+          p.c-heading-2.o-header--heading I AM Nabil Tharwat
+          .o-header-links
+            a(href="https://www.facebook.com/twiapos")
+              img(src="../assets/facebook.svg")
+            a(href="https://twitter.com/Nabil_Tharwat16")
+              img(src="../assets/twitter.svg")
+            a(href="https://www.linkedin.com/in/nabil-tharwat-30335b127/")
+              img(src="../assets/linkedin.svg")
+    .o-body
+      .o-body-firstIntro.c-section
+        h1.o-firstIntro-heading.u-animation-fadeInto-right I build refreshing websites
+        img.o-firstIntro-plant.u-animation-fadeInto-left(src="../assets/plant.jpg")
+      .o-body-secondIntro.c-section.u-animation-fadeInto-top
+        h1.o-secondIntro-heading I take pride in providing an exceptional browsing experience.
+        .o-secondIntro-perks 
+          .c-perk
+            img.c-perk-img(src="../assets/butterfly.svg")
+            h3.c-perk-header Elegance
+            p.c-perk-description I thrive to make my code beautiful and my designs precise. 
+          .c-perk
+            img.c-perk-img(src="../assets/connection.svg")
+            h3.c-perk-header Slow connection?
+            p.c-perk-description No worries! You'll get code that loads in blazing fast speed!
+          .c-perk
+            img.c-perk-img(src="../assets/back.svg")
+            h3.c-perk-header Wanna revert?
+            p.c-perk-description Easy! With version control, we'll have the best flow. 
+          .c-perk
+            img.c-perk-img(src="../assets/meter.svg")
+            h3.c-perk-header 
+              span.c-symbol ∞
+              | FPS 
+            p.c-perk-description I'm all about efficiency and performance, buckle up!
+        button.o-secondIntro-cv.c-button.c-button--red
+            p Download my CV
+      .c-pageBreak
+        hr.c-hr-break
+        h1.c-section-title.u-color-base My recent works
+      .o-body-projects.c-section
+        .c-project(data-project='clockAnimated')
+          .c-project-preview.u-animation-fadeInto-right 
+              .c-preview-desktop
+                .c-desktop-img
+              .c-preview-mobile
+                .c-mobile-img
+          .c-project-info.u-animation-fadeInto-left
+            h1.c-project-title Clock Animated
+            p.c-project-description A demo clock with elegance and performance in mind.
+            button.c-button--round 
+              p Demo
+        .c-project(data-project='SW19')
+          .c-project-preview.u-animation-fadeInto-right
+              .c-preview-desktop
+                .c-desktop-img
+              .c-preview-mobile
+                .c-mobile-img
+          .c-project-info.u-animation-fadeInto-left
+            h1.c-project-title SW19
+            p.c-project-description A tiny animation made for fun!
+            button.c-button--round 
+              p Demo
+      .c-pageBreak
+        hr.c-hr-break
+        h1.c-section-title.u-color-trueblack I 
+          span.u-text-bold enjoy 
+          | working with 
+      .o-skills
+        .c-skill(data-skill="Javascript")
+          h3.c-skill-title Javascript
+          .c-skill-progress
+          .c-skill-description ES2018+, Babel, Webpack
+        .c-skill(data-skill="React")
+          h3.c-skill-title React
+          .c-skill-progress
+          .c-skill-description React, Redux, Thunk, Next, Apollo
+        .c-skill(data-skill="Responsive")
+          h3.c-skill-title Responsive Design 
+          .c-skill-progress
+          .c-skill-description HTML5+, CSS3+
+        .c-skill(data-skill="Pre-Processors")
+          h3.c-skill-title Pre-Processors
+          .c-skill-progress
+          .c-skill-description Sass, Stylus, Slim, Pug, Flow, PostCSS
+        .c-skill(data-skill="Server")
+          h3.c-skill-title Server Architecture
+          .c-skill-progress
+          .c-skill-description Node, Express, Passport, GraphQL
+        .c-skill(data-skill="Database")
+          h3.c-skill-title Database Architecture
+          .c-skill-progress
+          .c-skill-description MongoDB, Firebase Firestore, Redis
+        .c-skill(data-skill="Libraries")
+          h3.c-skill-title Libraries & Frameworks
+          .c-skill-progress
+          .c-skill-description Underscore, jQuery, Bootstrap, Skeleton, PureCSS
+        .c-skill(data-skill="Testing")
+          h3.c-skill-title Testing
+          .c-skill-progress
+          .c-skill-description Jest, Mocha, Karma
+        .c-skill(data-skill="DevOps")
+          h3.c-skill-title DevOps
+          .c-skill-progress
+          .c-skill-description Heroku, GitHub, AWS, Google Cloud Storage, CircleCI
+        .c-skill(data-skill="Design")
+          h3.c-skill-title Design
+          .c-skill-progress
+          .c-skill-description Adobe Photoshop, Illustrator, XD, Figma, inVision Studio
+      .c-pageBreak
+    footer.o-footer.u-animation-fadeInto-top
+      h1.c-section-title.u-color-base Have any questions?
+      .c-button--red.c-button--round.u-center-h
+        p Contact me!
