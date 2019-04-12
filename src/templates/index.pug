@@ -4,7 +4,7 @@ html
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     title My Portfolio
-    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
     script(src="index.dev.js" async)
     link( href="https://fonts.googleapis.com/css?family=Nunito:200,400,900" rel="stylesheet")
   body
@@ -17,7 +17,7 @@ html
           button.c-hamburger-container#navigationButton(aria-label='menu' aria-controls='navigation')
             span.c-hamburger
         .o-header--textIntro.u-clearfix
-          p.c-heading-2.o-header--heading I AM Nabil Tharwat
+          p.c-heading-2.o-header-heading I AM Nabil Tharwat
           .o-header-links
             a(href="https://www.facebook.com/twiapos")
               img(src="../assets/facebook.svg")
@@ -60,24 +60,26 @@ html
           .c-project-preview.u-animation-fadeInto-right 
               .c-preview-desktop
                 .c-desktop-img
-              .c-preview-mobile
-                .c-mobile-img
+                .c-preview-mobile
+                  .c-mobile-img
           .c-project-info.u-animation-fadeInto-left
             h1.c-project-title Clock Animated
             p.c-project-description A demo clock with elegance and performance in mind.
-            button.c-button--round 
-              p Demo
+            form(method="GET" action="https://KL13NT.github.io/Clock-Animated" target="_blank")
+              button.c-button--round
+                p Demo
         .c-project(data-project='SW19')
           .c-project-preview.u-animation-fadeInto-right
               .c-preview-desktop
                 .c-desktop-img
-              .c-preview-mobile
-                .c-mobile-img
+                .c-preview-mobile
+                  .c-mobile-img
           .c-project-info.u-animation-fadeInto-left
             h1.c-project-title SW19
             p.c-project-description A tiny animation made for fun!
-            button.c-button--round 
-              p Demo
+            form(method="GET" action="https://KL13NT.github.io/Clock-Animated" target="_blank")
+              button.c-button--round 
+                p Demo
       .c-pageBreak
         hr.c-hr-break
         h1.c-section-title.u-color-trueblack I 

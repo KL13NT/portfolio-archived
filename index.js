@@ -6,6 +6,10 @@ document.getElementById('navigationButton').addEventListener('click', (e)=>{
 })
 
 window.addEventListener('load', ()=>{
+  let navigationButton = document.getElementById('navigationButton')
+  navigationButton.addEventListener('click', ()=>{
+    navigationButton.parentNode.parentNode.parentNode.classList.toggle('o-header--isActive')
+  })
   let windowInnerHeight = innerHeight + 100
   let scrollEffect = (element, classToBeAdded)=>{
     element.classList.add(classToBeAdded)

@@ -19,13 +19,13 @@ module.exports = {
     compress: false,
     contentBase: path.join(__dirname, './static'),
     publicPath: '/',
-    host: 'localhost',
     // inline: false,
     historyApiFallback: true,
     hot: true,
-    useLocalIp: false,
+    useLocalIp: true,
     watchContentBase: true,
     writeToDisk: false, 
+    host: '0.0.0.0'
   },
   module: {
     rules: [

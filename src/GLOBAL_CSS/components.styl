@@ -1,16 +1,12 @@
 //this includes all components, prefixed -c, reusable pieces, css stuff
 @import './settings.styl'
 .c-anchor
-  border solid 1px  $border-gradient
-  border-radius 2.5rem
   font $btnFont
-  text-transform $txtUpper
-  transition background 0.5s
-  margin-left 1.5rem
 
 .c-anchor--nav
   transition visibility 0.5s, transform 0.5s, opacity 0.5s
   padding 0 1rem
+  text-transform uppercase
   &::hover
     border-bottom solid 2px black
 
@@ -176,6 +172,7 @@
   margin 0 0 2rem 0
   font-weight 400
   width 2rem
+  font-size 2rem
 
 .c-project-description
   margin 2rem 0 
@@ -194,6 +191,7 @@
     top: -4px;
 
 .c-preview-mobile 
+  z-index 9
   @extend .c-preview-desktop 
   position: absolute
   height: 20rem;
