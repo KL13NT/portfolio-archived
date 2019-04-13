@@ -1,31 +1,13 @@
 /*
 	This file loads all appropriate styling in order and is the main file that compiles all
-	What we’re achieving is a component that is:
-
-    Scalable: as it can be added in any part of the page without any coding changes
-    Extensible: as it can serve different functionalities with the core functions unchanged
-    Maintainable: as it is organized in a way that makes sense
-
-	To achieve SEM, BIO has been used including:
-
-		Settings: Variables, Colors, Typo, Animation, Media Queries
-		Don't use @extend, dependancies are hated.
-		o- [object, block in BEM] as layout
-		e- [element] (Dont' use the prefix) are base
-		c- [component, element in BEM] for repeated stuff such as c-btn
-		u- [utility, modifiers in BEM] used to tiny modifications without changing classes
-	p- overriding patterns that aren't used scaleably
-
-	classname=" o-grid__footer  " for reusability OR classname="o-grid__footer c-btn c-btn--font-24" for specificity
-	classname=" o-header__overlays c-overlay-img"
+  DO NOT MODIFY THE ORDERING AS THAT CAN BREAK THE LOOK OF THE WEBSITE
+	LEAVE fonts.css AS THE LAST FILE TO BE IMPORTED, LETTING THE USER ENJOY THE WEBSITE BEFORE FONTS LOAD
 */
-
 @import './base.styl'
 @import './settings.styl'
 @import './utils.styl'
 @import './components.styl'
 @import './modules.styl'
 @import './queries.styl'
-@import './fonts.css'
 
-//TODO: Configure background positions using % instead of px
+//TODO: Add queries for tablet and x-large screens
