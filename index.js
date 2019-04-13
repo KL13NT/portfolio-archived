@@ -1,7 +1,6 @@
 import './src/GLOBAL_CSS/main.styl'
 
 window.addEventListener('DOMContentLoaded', ()=>{
-  console.log('loadde')
   let navigationButton = document.getElementById('navigationButton')
   navigationButton.addEventListener('click', ()=>{
     navigationButton.parentNode.parentNode.parentNode.classList.toggle('o-header--isActive')
