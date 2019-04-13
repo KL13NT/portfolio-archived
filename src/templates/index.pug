@@ -8,6 +8,7 @@ html
     meta(property="og:url" content="http://iamnabil.me/portfolio")
     meta(property="og:image" content="../assets/meta.png")
     meta(property="og:description" content="Hello, I'm Nabil Tharwat, a full-stack developer based in Egypt. I build websites using the MERN stack.")
+    meta(name="description", content='I AM NABIL THARWAT - Welcome to my portfolio.')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     title I AM NABIL THARWAT - Full-Stack Developer
     link(rel='apple-touch-icon', sizes='57x57', href='assets/apple-icon-57x57.png')
@@ -23,31 +24,23 @@ html
     link(rel='icon', type='image/png', sizes='32x32', href='assets/favicon-32x32.png')
     link(rel='icon', type='image/png', sizes='96x96', href='assets/favicon-96x96.png')
     link(rel='icon', type='image/png', sizes='16x16', href='assets/favicon-16x16.png')
-    link(rel='manifest', href='/manifest.json')
+    link(rel='manifest', href='assets/manifest.json')
     meta(name='msapplication-TileColor', content='#ffffff')
     meta(name='msapplication-TileImage', content='assets/ms-icon-144x144.png')
     meta(name='theme-color', content='#ffffff')
-
-    script(src="index.prod.js" defer)
     link(href="index.css" rel="stylesheet")
-  body
+    
+  body.u-noAnimation-fallback
     header.o-header
       .o-header--intro
         nav#headerNavigation.o-header--navigation.u-width-2
-          a.c-anchor.c-anchor--nav.u-display-none.u-opacity-zero.u-fadeinto-left(href="#skills") Skills
-          a.c-anchor.c-anchor--nav.u-display-none.u-opacity-zero.u-fadeinto-left(href="#works") Works
-          a.c-anchor.c-anchor--nav.u-display-none.u-opacity-zero.u-fadeinto-left(href="#contact") Contact
-          button.c-hamburger-container#navigationButton(aria-label='menu' aria-controls='navigation')
+          a.c-anchor.c-anchor--nav.u-display-none.u-opacity-zero.u-fadeinto-left(href="#skills" aria-role="menuitem") Skills
+          a.c-anchor.c-anchor--nav.u-display-none.u-opacity-zero.u-fadeinto-left(href="#works" aria-role="menuitem") Works
+          a.c-anchor.c-anchor--nav.u-display-none.u-opacity-zero.u-fadeinto-left(href="#contact" aria-role="menuitem") Contact
+          button.c-hamburger-container#navigationButton(aria-label='Menu' aria-controls='headerNavigation' aria-role="menuitem")
             span.c-hamburger
         .o-header--textIntro.u-clearfix
           p.c-heading-2.o-header-heading I AM Nabil Tharwat
-          .o-header-links
-            a(href="https://www.facebook.com/twiapos")
-              img(src="../assets/facebook.svg")
-            a(href="https://twitter.com/Nabil_Tharwat16")
-              img(src="../assets/twitter.svg")
-            a(href="https://www.linkedin.com/in/nabil-tharwat-30335b127/")
-              img(src="../assets/linkedin.svg")
     .o-body
       .o-body-firstIntro.c-section
         h1.o-firstIntro-heading.u-animation-fadeInto-right I build refreshing websites
@@ -56,19 +49,19 @@ html
         h1.o-secondIntro-heading I take pride in providing an exceptional browsing experience.
         .o-secondIntro-perks 
           .c-perk
-            img.c-perk-img(src="../assets/butterfly.svg")
+            img.c-perk-img(src="../assets/butterfly.svg" alt="Elegance Icon")
             h3.c-perk-header Elegance
             p.c-perk-description I thrive to make my code beautiful and my designs precise. 
           .c-perk
-            img.c-perk-img(src="../assets/connection.svg")
+            img.c-perk-img(src="../assets/connection.svg" alt="Slow connection Icon")
             h3.c-perk-header Slow connection?
             p.c-perk-description No worries! You'll get code that loads in blazing fast speed!
           .c-perk
-            img.c-perk-img(src="../assets/back.svg")
+            img.c-perk-img(src="../assets/back.svg" alt="Version control Icon")
             h3.c-perk-header Wanna revert?
             p.c-perk-description Easy! With version control, we'll have the best flow. 
           .c-perk
-            img.c-perk-img(src="../assets/meter.svg")
+            img.c-perk-img(src="../assets/meter.svg" alt="Performance Icon")
             h3.c-perk-header 
               span.c-symbol ∞
               | FPS 
@@ -156,3 +149,13 @@ html
         h1.c-section-title.u-color-base Have any questions?
         button.c-button--red.c-button--round.u-center-h(type="submit")
           p Contact me!
+        .o-header-links
+            a(href="https://www.facebook.com/twiapos")
+              img(src="../assets/facebook.svg" alt="My Facebook")
+            a(href="https://twitter.com/Nabil_Tharwat16" )
+              img(src="../assets/twitter.svg" alt="My Twitter")
+            a(href="https://www.linkedin.com/in/nabil-tharwat-30335b127/" )
+              img(src="../assets/linkedin.svg" alt="My LinkedIn")
+    
+    script(src="index.prod.js" defer)
+    script(src="vendors~index.prod.js" defer)

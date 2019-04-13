@@ -7,6 +7,7 @@ window.addEventListener('load', ()=>{
   })
   let windowInnerHeight = innerHeight + 100
   if(innerWidth > 600){
+    document.querySelector('body').classList.toggle('u-noAnimation-fallback')
     let scrollEffect = (element, classToBeAdded)=>{
       element.classList.add(classToBeAdded)
     }
@@ -23,7 +24,6 @@ window.addEventListener('load', ()=>{
       if(element.classList.contains('c-project')) pos.push(element.offsetTop + element.offsetHeight + element.parentNode.offsetTop)
       else pos.push((element.offsetTop + element.offsetHeight))
     })
-    console.log(pos, elements)
     window.addEventListener('scroll', (e)=>{
       elements.forEach(element=>{
         if(pos[elements.indexOf(element)]  <= (pageYOffset + windowInnerHeight )){
@@ -38,9 +38,6 @@ window.addEventListener('load', ()=>{
       })
       
     })
-  }
-  else{
-    document.querySelector('body').classList.add('u-override-mobile-animations')
   }
   
 })

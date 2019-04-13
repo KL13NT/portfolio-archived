@@ -7,6 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
 const ImageminPlugin = require('imagemin-webpack-plugin').default
 const imageminMozjpeg = require('imagemin-mozjpeg')
+const ImageminWebpWebpackPlugin= require("imagemin-webp-webpack-plugin")
 
 module.exports = {
   mode: 'production',
@@ -18,6 +19,17 @@ module.exports = {
     libraryTarget: 'umd',
     filename: '[name].prod.js',
     path: path.resolve(__dirname, 'docs'),
+  },
+  devServer: {
+    compress: true,
+    contentBase: path.join(__dirname, './static'),
+    publicPath: '/',
+    historyApiFallback: true,
+    hot: true,
+    useLocalIp: true,
+    watchContentBase: true,
+    writeToDisk: false, 
+    host: '0.0.0.0'
   },
   module: {
     rules: [
@@ -91,10 +103,11 @@ module.exports = {
       threshold: 200*1024
     }),
     new ImageminPlugin({
-      minFileSize: 2024 * 100,
-      pngquant: {quality: '50-50'},
+      minFileSize: 2024 * 20,
+      pngquant: {quality: '40-40'},
       plugins: [imageminMozjpeg({quality: 30})]
-    })
+    }),
+    new ImageminWebpWebpackPlugin({config: [{test: /\.(jpe?g|png)/,options: {quality: 30}}]})
   ],
   optimization: {
     minimizer: [
