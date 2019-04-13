@@ -1,11 +1,12 @@
 import './src/GLOBAL_CSS/main.styl'
 
 window.addEventListener('DOMContentLoaded', ()=>{
-  let navigationButton = document.getElementById('navigationButton')
-  navigationButton.addEventListener('click', ()=>{
-    navigationButton.parentNode.parentNode.parentNode.classList.toggle('o-header--isActive')
+  let _this = {}
+  _this.innerHeight = innerHeight
+  document.getElementById('navigationButton').addEventListener('click', function(){
+    this.parentNode.parentNode.parentNode.classList.toggle('o-header--isActive')
   })
-  if(innerWidth > 600){
+  if(_this.innerHeight > 600){
     document.querySelector('body').classList.toggle('u-noAnimation-fallback')
     let scrollEffect = (element, classToBeAdded)=>{
       element.classList.add(classToBeAdded)
