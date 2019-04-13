@@ -16,7 +16,8 @@
     "build:dev": "del public && webpack --mode development --config webpack.dev.config.js",
     "build:prod": "del public && webpack --mode production --config webpack.prod.config.js",
     "lint": "eslint \"src/**\" --config .eslintrc.js",
-    "test": "jest --colors -b -e --logHeapUsage"
+    "test": "jest --colors -b -e --logHeapUsage",
+    "flow:status": "flow status --quiet"
   },
   "keywords": [],
   "browserslist": [
@@ -28,14 +29,12 @@
   "devDependencies": {
     "@babel/core": "^7.4.0",
     "@babel/preset-env": "^7.4.2",
-    "@babel/preset-flow": "^7.0.0",
     "autoprefixer": "^9.5.0",
     "autoprefixer-stylus": "^0.14.0",
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
-    "babel-preset-flow": "^6.23.0",
     "compression-webpack-plugin": "^2.0.0",
     "css-loader": "^2.1.1",
     "eslint": "^5.16.0",

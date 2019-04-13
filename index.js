@@ -5,7 +5,6 @@ window.addEventListener('DOMContentLoaded', ()=>{
   navigationButton.addEventListener('click', ()=>{
     navigationButton.parentNode.parentNode.parentNode.classList.toggle('o-header--isActive')
   })
-  let windowInnerHeight = innerHeight + 100
   if(innerWidth > 600){
     document.querySelector('body').classList.toggle('u-noAnimation-fallback')
     let scrollEffect = (element, classToBeAdded)=>{
@@ -26,7 +25,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
     })
     window.addEventListener('scroll', (e)=>{
       elements.forEach(element=>{
-        if(pos[elements.indexOf(element)]  <= (pageYOffset + windowInnerHeight )){
+        if(pos[elements.indexOf(element)]  <= (pageYOffset + innerHeight )){
           if(element.classList.contains('c-skill')) {
             scrollEffect(element, 'c-skill-progress--isLoaded')
           }
