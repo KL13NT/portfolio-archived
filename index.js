@@ -36,7 +36,6 @@ window.addEventListener('DOMContentLoaded', ()=>{
           else scrollEffect(element, 'u-animation-fadeInto-direction--isActive')
         }
       })
-      
     })
   }
   
